@@ -29,6 +29,7 @@ input {
 input {
   height: 48px;
   padding: 10px;
+  margin-top: 10px;
 }
 button {
   height: 48px;
@@ -40,6 +41,10 @@ button {
   font-weight: 600;
   border-radius: 65px;
   cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+button:hover {
+  box-shadow: 3px 3px 3px rgb(87, 87, 87);
 }
 h2 {
   align-self: center;
