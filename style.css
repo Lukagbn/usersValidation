@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  height: 100vh;
+  display: flex;
+}
+.form {
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  height: 350px;
+  border: 1px solid rgb(225, 221, 228);
+  padding: 20px;
+  justify-content: space-between;
+}
+label,
+input {
+  display: block;
+  font-size: 18px;
+  width: 100%;
+}
+input {
+  height: 48px;
+  padding: 10px;
+}
+button {
+  height: 48px;
+  background-color: rgb(136, 0, 255);
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 65px;
+  cursor: pointer;
+}
+h2 {
+  align-self: center;
+}
+.password-group {
+  position: relative;
+}
+.pass-visible {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  user-select: none;
+}
+.message {
+  text-align: center;
+}
+.error {
+  color: red;
+}
+.success {
+  color: green;
+}
