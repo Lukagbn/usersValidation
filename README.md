@@ -83,8 +83,8 @@ const BASE_URL = "http://localhost:4000"; // or your Render URL
 {
   "firstName": "John",
   "lastName": "Doe",
-  "email": "john@example.com",
-  "password": "Password1!",
+  "email": "johndoe@gmail.com",
+  "password": "example1234@",
   "gender": true
 }
 ```
@@ -95,8 +95,8 @@ const BASE_URL = "http://localhost:4000"; // or your Render URL
 
 ```json
 {
-  "email": "john@example.com",
-  "password": "Password1!"
+  "email": "johndoe@gmail.com",
+  "password": "example1234@"
 }
 ```
 
