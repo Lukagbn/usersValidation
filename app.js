@@ -6,7 +6,7 @@ const passVisible = document.querySelector(".pass-visible");
 
 async function login(data) {
   try {
-    const res = await fetch("http://localhost:4000/users/auth", {
+    const res = await fetch("https://usersdb-26l6.onrender.com/users/auth", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
