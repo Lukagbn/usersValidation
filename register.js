@@ -1,32 +1,35 @@
-const form = document.querySelector("form");
+const register = document.querySelector(".register");
+const firstName = document.getElementById("firstName");
+const lastName = document.getElementById("lastName");
 const password = document.getElementById("password");
 const email = document.getElementById("email");
-const message = document.querySelector(".message");
+const male = document.getElementById("male");
+const genderInput = document.querySelectorAll(".gender-group input");
 const passVisible = document.querySelector(".pass-visible");
 
-async function login(data) {
+async function singup(data) {
   try {
-    const res = await fetch("http://localhost:4000/users/auth", {
+    const res = await fetch("http://localhost:4000/users/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     });
     const result = await res.json();
-    if (!res.ok) {
-      message.textContent = result.error;
-      message.classList.add("error");
-    } else {
-      message.textContent = result.message;
-      message.classList.add("success");
-    }
     console.log(result);
   } catch (err) {
     console.log("error:", err);
   }
 }
-form.addEventListener("submit", (e) => {
+
+register.addEventListener("submit", (e) => {
   e.preventDefault();
-  login({ email: email.value, password: password.value });
+  singup({
+    firstName: firstName.value,
+    lastName: lastName.value,
+    email: email.value,
+    password: password.value,
+    gender: male.checked,
+  });
 });
 passVisible.addEventListener("click", () => {
   password.type = password.type === "password" ? "text" : "password";
