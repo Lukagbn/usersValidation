@@ -70,6 +70,9 @@ h2 {
 .success {
   color: green;
 }
+.form-text {
+  text-align: center;
+}
 
 /* register */
 .register {
@@ -92,4 +95,14 @@ h2 {
 }
 .errorMessage {
   color: red;
+}
+button:disabled {
+  background-color: rgb(178, 178, 178);
+  cursor: not-allowed;
+}
+button:disabled:hover {
+  box-shadow: unset;
+}
+button:not:disabled {
+  background-color: rgb(136, 0, 255);
 }

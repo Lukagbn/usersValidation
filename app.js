@@ -3,6 +3,7 @@ const password = document.getElementById("password");
 const email = document.getElementById("email");
 const message = document.querySelector(".message");
 const passVisible = document.querySelector(".pass-visible");
+const logInBtn = document.querySelector("button");
 
 async function login(data) {
   try {
@@ -24,6 +25,11 @@ async function login(data) {
     console.log("error:", err);
   }
 }
+logInBtn.disabled = true;
+function validate() {
+  const allEntered = email.value.trim() && password.value.trim();
+  logInBtn.disabled = !allEntered;
+}
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   login({ email: email.value, password: password.value });
@@ -36,3 +42,5 @@ passVisible.addEventListener("click", () => {
     passVisible.textContent = "hide";
   }
 });
+email.addEventListener("input", validate);
+password.addEventListener("input", validate);
