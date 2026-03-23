@@ -5,6 +5,11 @@ const message = document.querySelector(".message");
 const passVisible = document.querySelector(".pass-visible");
 const logInBtn = document.querySelector("button");
 
+const token = localStorage.getItem("token");
+if (token) {
+  window.location.href = "./profile.html";
+}
+
 async function login(data) {
   try {
     const res = await fetch("https://usersdb-26l6.onrender.com/users/auth", {
@@ -20,7 +25,10 @@ async function login(data) {
       message.textContent = result.message;
       message.classList.add("success");
     }
-    console.log(result);
+    if (result.token) {
+      localStorage.setItem("token", result.token);
+      window.location.href = "./profile.html";
+    }
   } catch (err) {
     console.log("error:", err);
   }

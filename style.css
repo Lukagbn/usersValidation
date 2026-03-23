@@ -106,3 +106,29 @@ button:disabled:hover {
 button:not:disabled {
   background-color: rgb(136, 0, 255);
 }
+.container {
+  max-width: 400px;
+  width: 100%;
+  margin: 40px auto;
+  border-radius: 20px;
+  border: 1px solid #b8b8b8;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+.main {
+  width: 100%;
+  margin: auto;
+}
+.container h2 {
+  text-align: center;
+}
+.log-out {
+  width: 100%;
+}
+.container h3 {
+  display: flex;
+  justify-content: space-between;
+}

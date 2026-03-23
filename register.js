@@ -11,6 +11,11 @@ const passwordGroup = document.querySelectorAll(".password-group");
 const registerBtn = document.querySelector("button");
 const message = document.querySelector(".message");
 
+const token = localStorage.getItem("token");
+if (token) {
+  window.location.href = "./profile.html";
+}
+
 async function singup(data) {
   try {
     const res = await fetch("https://usersdb-26l6.onrender.com/users/", {
